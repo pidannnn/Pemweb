@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Mevvah</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- NavBar -->
+    <header>
+        <a href="#" class="logo"></i><h1>Rest Area.</h1></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a href="#subsidiary">Subsidiary</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="login-bt" href="login.html">Login</a></li>
+        </ul>
+    </header>
+
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="./img/hero/hero-3.jpg" alt="">
+        </div>
+        <div class="home-text">
+            <span>Welcome To</span>
+            <h1>Rest Area.</h1>
+            <h2>Your ultimate destination for comfort and luxury on every journey. From elegant interior designs to attentive service, we ensure that every moment at our hotel is unforgettable.</h2>
+            <a href="login.html" class="btn">Join Now</a>
+        </div>
+    </section>
+
+    <!-- Order -->
+    <section class="order-section ps-5" id="order">
+        <div class="heading">
+            <span>Check In Now</span>
+            <h1>Order With Heart</h1>
+        </div>
+        <div class="swiper">
+            <swiper-container class="mySwiper" effect="coverflow" grab-cursor="true" centered-slides="true"
+            slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+            coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" loop="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+            <swiper-slide>
+                <img src="./img/hero/hero-6.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="./img/hero/hero-7.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="./img/hero/hero-8.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="./img/hero/hero-9.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="./img/hero/hero-6.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="./img/hero/hero-7.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="./img/hero/hero-8.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="./img/hero/hero-9.jpg" />
+            </swiper-slide>
+            </swiper-container>
+        </div>
+        <div>
+            <div class="container-order">
+                <div class="container">
+                    <table>
+                    <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga</th>
+                        <th>Waktu</th>
+                        <th>Syarat dan Ketentuan</th>
+                        <th>Deskripsi</th>
+                    </tr>
+                    </thead>
+                    <tbody id="promotionTableBody">
+                    <tr>
+                        <td>Promo Basic</td>
+                        <td>100.000</td>
+                        <td>1 bulan</td>
+                        <td>Hanya untuk pelanggan baru</td>
+                        <td>Akses fitur dasar selama 1 bulan</td>
+                    </tr>
+                    <tr>
+                        <td>Promo Premium</td>
+                        <td>300.000</td>
+                        <td>3 bulan</td>
+                        <td>Diskon 10% untuk pembelian selanjutnya</td>
+                        <td>Akses penuh selama 3 bulan</td>
+                    </tr>
+                    <tr>
+                        <td>Promo Deluxe</td>
+                        <td>500.000</td>
+                        <td>6 bulan</td>
+                        <td>Gratis ongkir untuk pembelian pertama</td>
+                        <td>Akses premium dan berbagai keuntungan lainnya</td>
+                    </tr>
+                    <tr>
+                        <td>Promo Platinum</td>
+                        <td>1.000.000</td>
+                        <td>1 tahun</td>
+                        <td>Paket ini termasuk akses VIP</td>
+                        <td>Fitur lengkap sepanjang tahun</td>
+                    </tr>
+                    <tr>
+                        <td>Promo Ultimate</td>
+                        <td>1.500.000</td>
+                        <td>1 tahun</td>
+                        <td>Akses tanpa batas ke semua fitur</td>
+                        <td>Keanggotaan premium tanpa batas waktu</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h2 class="text-center fst-italic pb-3">Tambah Paket</h2>
+                    <form id="promotionForm">
+                        <input type="text" id="paket" placeholder="Nama Paket" required>
+                        <input type="number" id="harga" placeholder="Harga (Rp)" required>
+                        <input type="text" id="waktu" placeholder="Waktu (misal: 1 bulan)" required>
+                        <textarea id="syarat" placeholder="Syarat dan Ketentuan" rows="3" required></textarea>
+                        <textarea id="deskripsi" placeholder="Deskripsi Paket" rows="3" required></textarea>
+                        <button type="submit">Tambah Paket</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subsidiary -->
+    <section class="subsidiary" id="subsidiary">
+        <div class="heading">
+            <span>Our Family</span>
+            <h1>In Other Place</h1>
+        </div>
+        <div class="card-group pt-5 gap-5">
+            <div class="card">
+                <img src="./img/hero/hero-5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Cabang 1</h5>
+                <p class="card-text">Jalan Lenteng Agung Raya No.20 RT.5/RW.1 Lenteng Agung, Srengseng Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12640</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/hero/hero-5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Cabang 2</h5>
+                <p class="card-text">JRPV+QH5, Jl. Setu Indah No.116, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat 16451</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/hero/hero-5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Cabang 3</h5>
+                <p class="card-text">JRXM+G3W, Jl. Lenteng Agung Tim., RT.8/RW.1, Srengseng Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 10550</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="heading">
+            <span>Get In Touch</span>
+            <h1>Contact Us</h1>
+        </div>
+        <div class="container">
+            <div class="address-info-container">
+                <div class="address-info">
+                    <h2>Address :</h2>
+                    <p>Jalan Lenteng Agung Raya No.20 RT.5/RW.1 Lenteng Agung, Srengseng Sawah, Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12640</p>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15861.270082892343!2d106.8326236!3d-6.3529245!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec6b07b68ea5%3A0x17da46bdf9308386!2sSTT%20Terpadu%20Nurul%20Fikri%20-%20Kampus%20B!5e0!3m2!1sen!2sid!4v1732974062814!5m2!1sen!2sid" width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-form">
+                <form action="#">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="number" placeholder="Your Number Telp">
+                    <textarea name="" id="" cols="23" rows="5" placeholder="Your Message" required></textarea>
+                </form>
+                <div>
+                    <input type="submit" value="Send Message" class="btn">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact"">
+        <div class="social">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="https://shopee.co.id/" target="_blank"><i class="bx bx-shopping-bag"></i></a>
+        </div>
+        <div class="links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Term Of Use</a>
+            <a href="#">Our Company</a>
+        </div>
+        <p>&#169 Pidann All Right Reserved.</p>
+    </section>
+
+
+    <!-- Link to Js -->
+    <script src="main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
